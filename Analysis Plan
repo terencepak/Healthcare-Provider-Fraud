@@ -1,0 +1,111 @@
+Project Objectives
+Provider Fraud is one of the biggest problems facing Medicare. According to the government, the total Medicare spending increased exponentially due to frauds in Medicare claims. Healthcare fraud is an organized crime which involves peers of providers, physicians, beneficiaries acting together to make fraud claims.
+
+Rigorous analysis of Medicare data has yielded many physicians who indulge in fraud. They adopt ways in which an ambiguous diagnosis code is used to adopt costliest procedures and drugs. Insurance companies are the most vulnerable institutions impacted due to these bad practices. Due to this reason, insurance companies increased their insurance premiums and as result healthcare is becoming costly matter day by day.
+
+Healthcare fraud and abuse take many forms. Some of the most common types of frauds by providers are:
+a) Billing for services that were not provided.
+b) Duplicate submission of a claim for the same service.
+c) Misrepresenting the service provided.
+d) Charging for a more complex or expensive service than was actually provided.
+e) Billing for a covered service when the service actually provided was not covered.
+
+Problem Statement
+The goal of this project is to " predict the potentially fraudulent providers " based on the claims filed by them.along with this, we will also discover important variables helpful in detecting the behaviour of potentially fraud providers. further, we will study fraudulent patterns in the provider's claims to understand the future behaviour of providers.
+
+Introduction to the Dataset
+For the purpose of this project, we are considering Inpatient claims, Outpatient claims and Beneficiary details of each provider. Lets s see their details :
+A) Inpatient Data
+This data provides insights about the claims filed for those patients who are admitted in the hospitals. It also provides additional details like their admission and discharge dates and diagnosis code.
+B) Outpatient Data
+This data provides details about the claims filed for those patients who visit hospitals and not admitted in it.
+C) Beneficiary Details Data
+This data contains beneficiary KYC details like health conditions,regioregion they belong to etc.
+    
+Variables:
+    Inpatient Data 
+        BeneID - Beneficiary ID
+        ClaimID - Claim ID
+        ClaimStartDt - Claim Start Date
+        ClaimEndDt - Claim End Date
+        Provider - Provider ID
+        InscClaimAmtReimbursed - Insurance Claim Amount Reimbursed
+        AttendingPhysician - Attending Physician Code
+        OperatingPhysician - Operating Physician Code
+        OtherPhysician - Other Physician Code
+        AdmissionDt - Admission Date
+        ClmAdmitDiagnosisCode - Claim Diagnosis Code for admission
+        DeductibleAmtPaid - Deductible amount paid
+        DischargeDt - Discharge date
+        DiagnosisGroupCode - Diagnosis Group Code
+        ClmDiagnosisCode_1 - Claim Diagnosis Code_1
+        ClmDiagnosisCode_2 - Claim Diagnosis Code_2
+        ClmDiagnosisCode_3 - Claim Diagnosis Code_3
+        ClmDiagnosisCode_4 - Claim Diagnosis Code_4 
+        ClmDiagnosisCode_5 - Claim Diagnosis Code_5
+        ClmDiagnosisCode_6 - Claim Diagnosis Code_6
+        ClmDiagnosisCode_7 - Claim Diagnosis Code_7
+        ClmDiagnosisCode_8 - Claim Diagnosis Code_8
+        ClmDiagnosisCode_9 - Claim Diagnosis Code_9
+        ClmDiagnosisCode_10 - Claim Diagnosis Code_10
+        ClmProcedureCode_1 - Claim Procedure Code_1
+        ClmProcedureCode_2 - Claim Procedure Code_2
+        ClmProcedureCode_3 - Claim Procedure Code_3
+        ClmProcedureCode_4 - Claim Procedure Code_4
+        ClmProcedureCode_5 - Claim Procedure Code_5
+        ClmProcedureCode_6 - Claim Procedure Code_6
+    
+    Outpatient Data 
+        The same as Inpatient data with the exception of missing the AdmissionDt, ClmAdmitDiagnosisCode, DischargeDt
+    
+    Benerficiary Details Data 
+        BeneID - Beneficiary ID
+        DOB - Date of Birth
+        DOD - Date of Death
+        Gender - Gender of patient
+        Race - Race of patient
+        RenalDiseaseIndicator - 
+        State - Residential State of patient
+        County - Residential county of patient
+        NoOfMonths_PartACov - Number of months that the patient is covered under PartA
+        NoOfMonths_PartBCov - Number of months that the patient is covered under PartB
+        ChronicCond_Alzheimer - Does the patient have a history with Alzheimer? (1/2)
+        ChronicCond_Heartfailure - Does the patient have a history with heart failure? (1/2)
+        ChronicCond_KidneyDisease - Does the patient have a history with kidney disease? (1/2)
+        ChronicCond_Cancer - Does the patient have a history with cancer? (1/2)
+        ChronicCond_ObstrPulmonary - Does the patient have a history with obstructive pulmonary disease? (1/2)
+        ChronicCond_Depression - Does the patient have a history with depression? (1/2)
+        ChronicCond_Diabetes - Does the patient have a history with diabetes? (1/2)
+        ChronicCond_IschemicHeart - Does the patient have a history with ischemic heart disease? (1/2)
+        ChronicCond_Osteoporasis - Does the patient have a history with osteoporosis? (1/2)
+        ChronicCond_rheumatoidarthritis - Does the patient have a history with Rheumatoid arthritis? (1/2)
+        ChronicCond_stroke - Does the patient have a history with stroke? (1/2)
+        IPAnnualReimbursementAmt - InPatient Network Reimbursement Amount
+        IPAnnualDeductibleAmt - InPatient Network Deductible Amount
+        OPAnnualReimbursementAmt - OutPatient Network Reimbursement Amount
+        OPAnnualDeductibleAmt - OutPatient Network Deductible Amount
+
+Assumptions:
+    Age is based on the current year - date of birth
+
+Primary Question(s):
+    Is the provider possibly claiming frauds?
+    Is the actual claim a fraud or not?
+    
+Secondary Questions:
+
+
+Analysis:
+    1) Combine Outpatient/Inpatient data with Beneficiary
+    2) Data exploration
+    3) Classification (Decision Tree / Logistic Regression / Random Forrest)
+    4) Clustering (K-means clustering / DBScan)
+    
+    Optional - Deep Learning ()
+    
+    
+    
+    
+    
+
+
