@@ -80,26 +80,35 @@ Variables:
         ChronicCond_Osteoporasis - Does the patient have a history with osteoporosis? (1/2)
         ChronicCond_rheumatoidarthritis - Does the patient have a history with Rheumatoid arthritis? (1/2)
         ChronicCond_stroke - Does the patient have a history with stroke? (1/2)
-        IPAnnualReimbursementAmt - InPatient Network Reimbursement Amount
-        IPAnnualDeductibleAmt - InPatient Network Deductible Amount
-        OPAnnualReimbursementAmt - OutPatient Network Reimbursement Amount
-        OPAnnualDeductibleAmt - OutPatient Network Deductible Amount
+        IPAnnualReimbursementAmt - InPatient Network Annual Reimbursement Amount
+        IPAnnualDeductibleAmt - InPatient Network Annual Deductible Amount
+        OPAnnualReimbursementAmt - OutPatient Network Annual Reimbursement Amount
+        OPAnnualDeductibleAmt - OutPatient Network Annual Deductible Amount
 
 Assumptions:
-    Age is based on the current year - date of birth
+    Age is based on the 2009 - date of birth
 
 Primary Question(s):
-    Is the provider possibly claiming frauds?
-    Is the actual claim a fraud or not?
+    - What providers are potentail fraud providers? (Predict the probability of a potential fraud provider and flag them.)
     
 Secondary Questions:
-
+    - Does Age play a role in fraud claims?
+    - From month to month, is there a pattern when fraud provider claims occur?
+    - Do fraud providers have a significantly larger reimbursement per claim than valid providers?
+    - Do fraud providers have a significantly larger reimbursement per patient than valid providers?
+    - What important variables can be used to flag a potential fraud provider? (VIF)
 
 Analysis:
     1) Combine Outpatient/Inpatient data with Beneficiary
     2) Data exploration
-    3) Classification (Decision Tree / Logistic Regression / Random Forrest)
-    4) Clustering (K-means clustering / DBScan)
+        - What are the attributes of the Beneficiaries?
+        - What are the most common procedure codes?
+        - What are the most common Diagnosis codes?    
+        
+    3) What important variables can be used to flag a potential fraud provider? Use VIF
+        - Dummy Variables?
+    4) Classification (Decision Tree / Logistic Regression / Random Forrest)
+    5) Clustering (K-means clustering / DBScan)
     
     Optional - Deep Learning ()
     
