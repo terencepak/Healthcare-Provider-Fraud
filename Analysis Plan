@@ -107,10 +107,11 @@ Analysis:
         
     3) What important variables can be used to flag a potential fraud provider? Use VIF
         - Dummy Variables?
-    4) Classification (Logistic Regression (Logloss) / Decision Tree / Random Forrest)
-    5) Clustering (K-means clustering / DBScan)
-    
-    Optional - Deep Learning ()
+    4) Classification 
+        - Logistic Regression (Logloss)
+        - Decision Tree
+        - Random Forrest
+        - XGBoost
     
     
     
